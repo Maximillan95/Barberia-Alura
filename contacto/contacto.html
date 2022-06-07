@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contacto - Barbería</title>
+    <link rel="stylesheet" href="../resetCss/reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="menu-cabecera">
+            <h1><img src="../imagenes/logo.png" alt="Logo de la Barbería"></h1>
+            <nav>
+                <ul >
+                    <li><a href="../index/index.html">Home</a></li>
+                    <li><a href="../productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form>
+            <label for="nombreyapellido">Nombre y Apellido</label> <!--sirve para indicar para qué sirve el input, para tener un tituo para la entrada de datos-->
+            <input type="text" id="nombreyapellido" class="input-padron" required> <!--Para la entrada de dato de uduario-->
+
+            <label for="correoelectronico">Correo electrónico</label>
+            <input type="email" id="correoelectronico" class="input-padron" placeholder="text@text.com" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="input-padron" required placeholder="Número sin 0 ni 15">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea name="" id="mensaje" cols="70" rows="10" class="input-padron" placeholder="Ingrese su mensaje aquí"></textarea>
+
+            <fieldset> <!-- Agrupa items que pertenecen al mismo grupo-->
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                
+                <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email"> <!--Le ponemos NAME y el mismo nombre a los3 radio para decirle que estos pertenecen al mismo grupo, por ende nos va a dejar seleccionar solo una sola opcion-->Email</label>
+                
+                <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono"><!--La etiqueta NAME solo se puede "completar" una vez-->Teléfono</label>
+                
+                <label for="radio-whatsapp"><input checked type="radio" name="contacto" value="whatsapp" id="radio-whatsapp">WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cuál horario prefiere ser atendido?</legend>
+                <select class="turnos">
+                    <option>Mañana</option><!--Cada item se define con la etiqueta OPTION-->
+                    <option>Tarde</option><!--Sieven para crear items seleccionables de una etiqueta SELECT-->
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+
+            <input type="submit"  value="Enviar formulario" class="enviar">
+        </form>
+
+        <table>
+            <thead> <!--ENCABEZADO-->
+                <tr> <!--Con TR creamos la FILA-->
+                    <th>Día</th> <!--representa la celda del encabezado de la tabla-->
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody> <!--CUERPO DE LA TABLA-->
+                <tr>
+                    <td>Lunes</td> <!--Con TD creamos cada celda de esa tabla-->
+                    <td>08:00 a 20:00</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>08:00 a 20:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08:00 a 20:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <img src="../imagenes/logo-blanco.png" alt="Logo de la Barbería">
+        <p class="copyright">&copy Copyright Barbería Alura - 2020</p>
+    </footer>
+</body>
+</html>
